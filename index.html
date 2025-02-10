@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartita ❤️</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Lato", sans-serif !important;
+    }
+
+    body {
+      background-color: #6f1313 !important;
+    }
+
+    .card {
+      width: 640px;
+      height: 400px;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      -webkit-perspective: 1200px;
+      perspective: 1200px;
+      transition: 1s;
+      border-radius: 12px !important;
+    }
+
+    .card:hover {
+      transform: rotate(-5deg);
+    }
+
+    .card:hover .outside {
+      transform: rotateY(-130deg);
+    }
+
+    .outside,
+    .inside {
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      left: 50.1%;
+    }
+
+    .inside {
+      background: linear-gradient(to right, #e7e7e7, #ffffff 30%);
+      padding: 0 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      left: 50%;
+    }
+
+    .back {
+      padding: 0 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      /* Asegura que esté centrado al igual que .inside */
+      height: 100%;
+    }
+
+
+    .outside {
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      z-index: 1;
+      transform-origin: left;
+      transition: 2s;
+      cursor: pointer;
+    }
+
+    .front,
+    .back {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      transform: rotateX(0deg);
+    }
+
+    .front {
+      background-color: #ffffff;
+    }
+
+    .back {
+      transform: rotateY(180deg);
+      background: linear-gradient(to left, #e7e7e7, #ffffff 30%);
+    }
+
+    .hat {
+      width: 100%;
+      padding: 12px;
+
+    }
+
+    .additional-image {
+      width: 100%;
+      bottom: 30px;
+    }
+
+    .additional-image-2 {
+      width: 100%;
+      bottom: 41px;
+      left: 14px;
+    }
+
+    .outside p {
+      font-size: 12px !important;
+
+      margin-top: 12px;
+      text-align: center;
+
+      color: #000000;
+    }
+
+    .inside h1 {
+      font-size: 120px;
+      line-height: 120px;
+    }
+
+    @media (max-width: 768px) {
+
+      html,
+      body {
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .card {
+        width: 90%;
+        margin: 200px auto;
+
+      }
+
+      /* Reducir el tamaño de fuente en la tarjeta */
+      .card p,
+      .card li,
+      .card span {
+        font-size: 12px;
+        /* Ajusta según se requiera */
+        line-height: 1.2;
+        text-align: justify;
+      }
+
+      .card h1 {
+        font-size: 20px;
+        /* Si usas h1 dentro de la tarjeta */
+      }
+    }
+
+    .card .front p {
+      text-align: center;
+    }
+
+    .background-message {
+      position: fixed;
+      left: 25%;
+      transform: translateX(-50%);
+      color: #fff;
+      z-index: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="background-message">Dale click a la tarjeta 👉</div>
+
+  <div class="card">
+    <div class="outside">
+      <div class="front">
+        <p>Para Joss ❤️</p>
+        <img src="img2.jpg" alt="foto" class="hat">
+        <p>Te amo con todo mi corazón, te hice esta tarjetita para ti ❤️
+          <br>
+          <br>
+          -Por Briansin-
+        </p>
+      </div>
+
+      <div class="back">
+        <p>Me encanta todo de ti, tu sonrisa, tu risa, tu forma de ser, 
+          tu forma de pensar, tu forma de ver la vida, tu forma de amar, 
+          tu forma de ser conmigo, tu forma de ser con la vida, 
+          ME ENCANTA TODO DE TI!! ❤️
+        </p>
+        <img src="im1.jpg" alt="Imagen adicional" class="additional-image-2">
+      </div>
+
+    </div>
+
+    <div class="inside">
+      <p>Mi amor, antes de preguntarte algo, quiero decirte 
+        que eres una mujer increíble, inteligente y hermosísima. 
+        Estoy feliz de estar a tu lado y ansioso por vivir muchas aventuras juntos. 
+        
+        <br>
+        Me saqué la lotería contigo, y no sé qué hice para merecerte, pero estoy muy agradecido. 
+        quiero preguntar   .....si 👉 <a href="ini.html">¿tu?</a> 👈
+      </p>
+      <img src="img3.jpg" alt="Imagen adicional" class="additional-image">
+      <h1></h1>
+    </div>
+
+  </div>
+</body>
+
+</html>
